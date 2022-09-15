@@ -1,0 +1,35 @@
+<h1>Recetas</h1>
+{% if latest_question_list %}
+    <ul>
+        {% for receta in latest_question_list %}
+            
+            <h2>{{receta.titulo}}</h2>
+                <li>
+                    <p>Ingredientes:</p>{{receta.ingredientes}}
+                </li>
+                <li>
+                    <p>Preparacion:</p>{{receta.preparacion}}
+                </li>
+                <li>
+                    <p>Autor:</p>{{receta.autor}}
+                </li>
+                
+            
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No hay registros</p>
+{% endif %} 
+<!--{% if latest_question_list %}
+    <ul>
+        {% for pregunta in latest_question_list %}
+            <li>
+                <a href="/encuesta/{{pregunta.id}}">
+                    {{pregunta.pregunta_texto}}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No hay registros</p>
+{% endif %}-->
